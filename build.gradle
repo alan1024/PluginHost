@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
+        jcenter()
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath "com.qihoo360.replugin:replugin-host-gradle:2.3.4"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
+        jcenter()
+        mavenCentral()
+        google()
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

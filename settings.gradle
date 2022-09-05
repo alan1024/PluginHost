@@ -1,0 +1,2 @@
+rootProject.name = "PluginHost"
+include ':app'
