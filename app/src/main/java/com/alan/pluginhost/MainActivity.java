@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (RePlugin.isPluginInstalled("loan")) {
-                    RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ゼナシ"));
+                    RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ㆧほにㆹ"));
                 } else {
                     Toast.makeText(MainActivity.this, "You must install demo3 first!", Toast.LENGTH_SHORT).show();
                 }
