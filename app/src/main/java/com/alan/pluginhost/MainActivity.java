@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (RePlugin.isPluginInstalled("lib")) {
-                    RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("lib", "com.alan.pluglib.MainActivity"));
+                if (RePlugin.isPluginInstalled("loan")) {
+                    RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ゼナシ"));
                 } else {
                     Toast.makeText(MainActivity.this, "You must install demo3 first!", Toast.LENGTH_SHORT).show();
                 }
