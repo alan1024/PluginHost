@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (RePlugin.isPluginInstalled("loan")) {
-
             RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ゼナシ"));
 //                    RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ㆧほにㆹ"));
             finish();
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "You must install demo3 first!", Toast.LENGTH_SHORT).show();
         }
 
-//                RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("com.alan.pluglib", "com.alan.pluglib.CodeActivity"));
+
 
 //        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 //            @Override
