@@ -47,6 +47,7 @@
         android:theme="@style/Theme.PluginHost">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

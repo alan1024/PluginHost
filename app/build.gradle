@@ -11,10 +11,25 @@ android {
         versionName "1.0"
     }
 
+    signingConfigs {
+        config {
+            keyAlias 'yeah_rupee'
+            keyPassword '123456'
+            storeFile file('yeah_rupee.jks')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     compileOptions {
