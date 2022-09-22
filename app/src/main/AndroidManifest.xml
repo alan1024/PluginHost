@@ -40,9 +40,9 @@
 
     <application
         android:name=".HostApp"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo"
         android:networkSecurityConfig="@xml/network_config"
         android:theme="@style/Theme.PluginHost">
         <activity
