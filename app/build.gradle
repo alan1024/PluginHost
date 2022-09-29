@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'com.appsflyer:af-android-sdk:6.5.2'
     implementation "com.qihoo360.replugin:replugin-host-lib:2.3.4"
 }
 
