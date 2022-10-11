@@ -12,6 +12,20 @@ import java.util.Map;
 
 public class HostApp extends RePluginApplication {
     public static final String AF_KEY = "GFMADKCDDtzsUubS58QVGA";
+    public static volatile HostApp instance;
+
+
+    public static HostApp getInstance(){
+        if (instance == null) {
+            synchronized (HostApp.class){
+                if (instance == null) {
+                    instance = new HostApp();
+                }
+            }
+        }
+        return instance;
+    }
+
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -21,6 +35,7 @@ public class HostApp extends RePluginApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
 
         init(this, AF_KEY);
     }
