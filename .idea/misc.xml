@@ -4,6 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/activity_main.xml" value="0.5265625" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/activity_main6.xml" value="0.29791666666666666" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/activity_spactivity.xml" value="0.29791666666666666" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_blank.xml" value="0.29791666666666666" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_item.xml" value="0.29791666666666666" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_item_list.xml" value="0.2833333333333333" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_item_list2.xml" value="0.29791666666666666" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_item_list3.xml" value="0.2833333333333333" />
+        <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/layout/fragment_item_list4.xml" value="0.2833333333333333" />
         <entry key="..\:/AndroidStudioWorkSpace/PluginHost/app/src/main/res/xml/network_config.xml" value="0.26614583333333336" />
       </map>
     </option>

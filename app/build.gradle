@@ -45,6 +45,9 @@ dependencies {
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'com.appsflyer:af-android-sdk:6.5.2'
     implementation "com.qihoo360.replugin:replugin-host-lib:2.3.4"
+    implementation "org.greenrobot:eventbus:3.1.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }
 
 apply plugin: 'replugin-host-gradle'
