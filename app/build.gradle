@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.cash.yeahrupee"
+        applicationId "com.rupee.park"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -13,10 +13,10 @@ android {
 
     signingConfigs {
         config {
-            keyAlias 'yeah_rupee'
-            keyPassword '123456'
-            storeFile file('yeah_rupee.jks')
-            storePassword '123456'
+            keyAlias 'rupeepark'
+            keyPassword 'rupeepark'
+            storeFile file('./rupeepark-keystore.jks')
+            storePassword 'rupeepark'
         }
     }
 
@@ -45,6 +45,8 @@ dependencies {
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'com.appsflyer:af-android-sdk:6.5.2'
     implementation "com.qihoo360.replugin:replugin-host-lib:2.3.4"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 }
 
 apply plugin: 'replugin-host-gradle'
