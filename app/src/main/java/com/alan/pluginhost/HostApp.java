@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import androidx.multidex.MultiDex;
+
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
 import com.qihoo360.replugin.RePluginApplication;
@@ -16,6 +18,9 @@ public class HostApp extends RePluginApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        Log.e("xujm", "123");
+
+        MultiDex.install(this);
     }
 
     @Override
