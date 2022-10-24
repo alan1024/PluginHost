@@ -11,7 +11,7 @@ import com.qihoo360.replugin.RePluginApplication;
 import java.util.Map;
 
 public class HostApp extends RePluginApplication {
-    public static final String AF_KEY = "GFMADKCDDtzsUubS58QVGA";
+    public static final String AF_KEY = "BjbZ8Y5WdjqF9Vu7mxYqeW";
 
     @Override
     protected void attachBaseContext(Context base) {
