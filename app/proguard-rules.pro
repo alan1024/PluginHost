@@ -61,14 +61,8 @@
 -keepattributes SourceFile,LineNumberTable
 # 混淆采用的算法
 -optimizations !code/simplification/cast,!field/*,!class/merging/*
-
--keep class com.rupee.park.** {*;}
--dontwarn com.rupee.park.**
--keep class com.qihoo360.** {*;}
--dontwarn com.qihoo360.**
--keep class com.alan.pluginhost.** {*;}
--dontwarn com.alan.pluginhost.**
-
+#混淆前后的映射
+-printmapping mapping.txt
 
 
 -keep public class * extends android.app.Fragment
@@ -150,107 +144,12 @@
     java.lang.Object readResolve();
 }
 
-# WebView混淆配置
--keepclassmembers class * extends android.webkit.webViewClient {
-    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);
-    public boolean *(android.webkit.WebView, java.lang.String);
-}
--keepclassmembers class * extends android.webkit.webViewClient {
-    public void *(android.webkit.webView, jav.lang.String);
-}
--keepattributes JavascriptInterface
 
-# okhttp3
--dontwarn com.squareup.okhttp3.**
--keep class com.squareup.okhttp3.** { *;}
--dontwarn okio.**
+-keep class com.qihoo360.** {*;}
+-dontwarn com.qihoo360.**
+-keep class com.alan.pluginhost.** {*;}
+-dontwarn com.alan.pluginhost.**
 
-# retrofit2
--dontwarn retrofit2.**
--keep class retrofit2.** { *; }
--keepattributes Signature
--keepattributes Exceptions
-
-
-# glide 3
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
-
-# glide 4
--keep public class * implements com.bumptech.glide.module.AppGlideModule
--keep public class * implements com.bumptech.glide.module.LibraryGlideModule
--keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
-
-# gson
-# For using GSON @Expose annotation
--keepattributes *Annotation*
-
-# Gson specific classes
--dontwarn sun.misc.**
-#-keep class com.google.gson.stream.** { *; }
-
-# Application classes that will be serialized/deserialized over Gson
--keep class com.rupee.park.model.** {
-    public *;
-    <fields>;
-    <methods>;
-}
-
-
-# Prevent proguard from stripping interface information from TypeAdapter, TypeAdapterFactory,
-# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
--keep class * implements com.google.gson.TypeAdapter
--keep class * implements com.google.gson.TypeAdapterFactory
--keep class * implements com.google.gson.JsonSerializer
--keep class * implements com.google.gson.JsonDeserializer
-
-# Prevent R8 from leaving Data object members always null
--keepclassmembers,allowobfuscation class * {
-  @com.google.gson.annotations.SerializedName <fields>;
-}
-
--keep class com.zy.devicelibrary.** {*;}
-
-#appsflyer
--keep class com.appsflyer.** { *; }
-
-#facebook
--keep class com.facebook.** { *; }
-
-
--dontwarn com.android.installreferrer
-
-#-ButterKnife 7.0
--keep class butterknife.** { *; }
--dontwarn butterknife.internal.**
--keep class **$$ViewBinder { *; }
--keepclasseswithmembernames class * {
-    @butterknife.* <fields>;
-}
--keepclasseswithmembernames class * {
- @butterknife.* <methods>;
-}
-
-# RxLifeCycle4
--keep class com.trello.rxlifecycle4.** { *; }
--keep interface com.trello.rxlifecycle4.** { *; }
--dontwarn com.trello.rxlifecycle4.**
-
-# rxjava3
--keep class io.reactivex.rxjava3.** { *; }
--keep interface io.reactivex.rxjava3.** { *; }
--dontwarn io.reactivex.rxjava3.**
-
-# reactivestreams
--keep class org.reactivestreams.** { *; }
--keep interface org.reactivestreams.** { *; }
--dontwarn org.reactivestreams.**
 
 # firebase
 -keep class com.google.firebase.** { *; }
