@@ -12,10 +12,6 @@ import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-import com.alan.pluginhost.utils.ijkplayer.widget.media.IjkVideoView;
-import com.alan.pluginhost.utils.ijkplayer.widget.view.ProgressView;
-
-
 public class IjkController {
 
     public static final int PLAY_PROGRESS = 0;
@@ -38,10 +34,8 @@ public class IjkController {
     private ImageView mIvNext;
     private ImageView mIvRatio;
     private TextView mTvCurrentTime;
-    private ProgressView mPvPlay;
     private TextView mTvTotalTime;
     private ImageView mIvRotate;
-    private ProgressView mPvBrightnessVolume;
     private LinearLayout mLlBrightnessVolume;
     private ImageView mIvBrightnessVolume;
     private TextView mTvBrightnessVolume;
@@ -52,7 +46,6 @@ public class IjkController {
 
     private boolean mIsLock;
 
-    private IjkVideoView mIjkVideoView;
 
     private boolean mAnimationStart;
 
