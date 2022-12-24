@@ -17,7 +17,7 @@ import org.json.JSONObject;
 import java.util.Map;
 
 public class HostApp extends RePluginApplication {
-    public static final String AF_KEY = "kaiXeo97irmWLBhAjKhvya";
+    public static final String AF_KEY = "7i7RQuA3MaK6YpMUV9MhVQ";
     public static String AF_ID = "af_id";
     public static String AF_CONVERSION_KEY = "conversion_data";
     public static String AF_MEDIA = "media_source_key";
