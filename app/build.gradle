@@ -4,7 +4,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.rupee.park"
+        applicationId "com.cash.uncle.rupee"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
@@ -27,7 +27,7 @@ android {
             signingConfig signingConfigs.config
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
