@@ -4,7 +4,7 @@
     android:opacity="opaque">
 
     <item>
-        <bitmap android:src="@mipmap/qpy_bg" />
+        <bitmap android:src="@mipmap/ic_splash" />
     </item>
 
 
