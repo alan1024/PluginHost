@@ -1,9 +1,9 @@
 buildscript {
     repositories {
-        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
         jcenter()
-        mavenCentral()
         google()
+        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.4'
@@ -13,10 +13,11 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
+        maven { url 'https://jitpack.io' }
         jcenter()
         mavenCentral()
         google()
+        maven { url "http://maven.geelib.360.cn/nexus/service/rest/repository/browse/replugin/" }
     }
 }
 

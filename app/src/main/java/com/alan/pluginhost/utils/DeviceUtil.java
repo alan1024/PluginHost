@@ -1,0 +1,24 @@
+package com.alan.pluginhost.utils;
+
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+
+
+public class DeviceUtil {
+    /**
+     * 获取当前应用的版本号
+     */
+    public static String getVersionName(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return "0.0.0";
+        }
+        String versionName = packageInfo.versionName;
+        return versionName;
+    }
+}

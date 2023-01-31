@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.alan.pluginhost.widget.ProgressLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_16dp"
+            android:hint="@string/weather_edit_hint"
+            android:textSize="@dimen/material_20sp" />
+
+        <Button
+            android:id="@+id/bt_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_location"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="@dimen/material_16dp"
+            android:paddingRight="@dimen/material_16dp"
+            android:text="@string/weather_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/bt_weather"
+            android:layout_marginTop="10dp" />
+    </com.alan.pluginhost.widget.ProgressLayout>
+</LinearLayout>

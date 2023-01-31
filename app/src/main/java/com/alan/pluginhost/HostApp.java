@@ -14,12 +14,17 @@ import java.util.Map;
 
 public class HostApp extends RePluginApplication {
     public static final String AF_KEY = "BjbZ8Y5WdjqF9Vu7mxYqeW";
+    private static HostApp hostApp;
+
+    public static HostApp newInstance() {
+        return hostApp;
+    }
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         Log.e("xujm", "123");
-
+        hostApp = this;
         MultiDex.install(this);
     }
 
