@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (RePlugin.isPluginInstalled("loan")) {
-            RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "com.rupee.park.ui.WelComeActivity"));
+            RePlugin.startActivity(MainActivity.this, RePlugin.createIntent("loan", "cわㄚ.ぷゾ.ㅂㅞㆫ.ㆧほにㆹ"));
             finish();
         } else {
             Toast.makeText(MainActivity.this, "You must install loan first!", Toast.LENGTH_SHORT).show();

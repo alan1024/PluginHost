@@ -1,10 +1,11 @@
 apply plugin: 'com.android.application'
+apply plugin: "com.google.gms.google-services"
 
 android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.rupee.park"
+        applicationId "com.cash.yeahrupee"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
@@ -23,11 +24,15 @@ android {
     buildTypes {
         release {
             minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
         debug {
             minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
@@ -36,6 +41,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    ndkVersion '20.0.5594570'
+    buildToolsVersion '30.0.3'
 }
 
 dependencies {
@@ -48,6 +55,17 @@ dependencies {
     implementation "com.qihoo360.replugin:replugin-host-lib:2.3.4"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    implementation 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation 'io.reactivex:rxandroid:1.0.1'
+
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.google.firebase:firebase-bom:30.1.0'
+    implementation 'com.google.firebase:firebase-analytics:21.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.4'
 }
 
 apply plugin: 'replugin-host-gradle'

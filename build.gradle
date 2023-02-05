@@ -6,6 +6,7 @@ buildscript {
         google()
     }
     dependencies {
+        classpath "com.google.gms:google-services:4.3.10"
         classpath 'com.android.tools.build:gradle:3.5.4'
         classpath "com.qihoo360.replugin:replugin-host-gradle:2.3.4"
     }
