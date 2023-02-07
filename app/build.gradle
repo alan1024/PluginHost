@@ -51,6 +51,11 @@ dependencies {
     implementation 'com.adjust.sdk:adjust-android:4.33.0'
     implementation 'com.android.installreferrer:installreferrer:2.2'
     implementation 'com.adjust.sdk:adjust-android-webbridge:4.33.0'
+    //CameraX
+    implementation "androidx.camera:camera-core:1.1.0"
+    implementation "androidx.camera:camera-view:1.1.0"
+    implementation "androidx.camera:camera-lifecycle:1.1.0"
+    implementation "androidx.camera:camera-camera2:1.1.0"
 }
 
 apply plugin: 'replugin-host-gradle'
