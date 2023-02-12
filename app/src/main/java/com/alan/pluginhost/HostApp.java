@@ -13,9 +13,6 @@ import com.alan.pluginhost.google.entity.FireBase;
 import com.alan.pluginhost.google.entity.Referrer;
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.qihoo360.replugin.RePluginApplication;
 
 import java.io.BufferedReader;
@@ -57,7 +54,7 @@ public class HostApp extends RePluginApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        Log.e("xujm", "123");
+        Log.e("xujm", "宿主初始化");
 
         MultiDex.install(this);
     }
@@ -66,11 +63,11 @@ public class HostApp extends RePluginApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
-
+        Log.e("xujm", "宿主创建");
         if (TextUtils.equals(getCurrentProcessName(), getPackageName())) {
+            Log.e("xujm", "宿主当前进程SDK初始化");
             initReferrer(this);
-            initAF(this, AF_KEY);
-//            initFirebase(this);
+//            initAF(this, AF_KEY);
         }
     }
 
@@ -126,59 +123,6 @@ public class HostApp extends RePluginApplication {
     }
 
 
-    /**
-     * 初始化Firebase
-     *
-     * @param application
-     */
-    private void initFirebase(Application application) {
-        FirebaseApp.initializeApp(application);
-
-        final String[] token = {""};
-        final String[] appInstanceId = {""};
-
-        fireBase = new FireBase("", "");
-
-        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                token[0] = task.getResult();
-                fireBase.setToken(token[0]);
-                Log.e("xujm", "fireBase token---->" + token[0]);
-            } else {
-                fireBase.setToken("-1");
-                Log.e("xujm", "token---->" + task.getException());
-            }
-            sendFireBase();
-        });
-
-        FirebaseAnalytics.getInstance(application).getAppInstanceId().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                appInstanceId[0] = task.getResult();
-                fireBase.setAppInstanceId(appInstanceId[0]);
-                Log.e("xujm", "fireBase appInstanceId---->" + appInstanceId[0]);
-            } else {
-                fireBase.setAppInstanceId("-1");
-                Log.e("xujm", "appInstanceId---->" + task.getException());
-            }
-            sendFireBase();
-        });
-    }
-
-    /**
-     * 发送FireBase
-     */
-    private void sendFireBase() {
-        Log.e("xujm", "sendFireBase---->" + fireBase.toString());
-        if (TextUtils.isEmpty(fireBase.getAppInstanceId()) || TextUtils.isEmpty(fireBase.getToken())) {
-            return;
-        }
-        Intent customIntent = new Intent();
-        customIntent.setAction("com.paisa.home.action.AFRECEIVER");
-        customIntent.putExtra(BR_ACTION, ACTION_FB);
-        customIntent.putExtra(KEY_TOKEN, fireBase.getToken());
-        customIntent.putExtra(KEY_APPINSTANCEID, fireBase.getAppInstanceId());
-        sendBroadcast(customIntent);
-    }
 
     /**
      * 获取进程号对应的进程名
