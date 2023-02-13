@@ -55,7 +55,7 @@ public class HostApp extends RePluginApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        Log.e("xujm", "123");
+        Log.e("xujm", "宿主启动");
 
         MultiDex.install(this);
     }
@@ -64,7 +64,7 @@ public class HostApp extends RePluginApplication {
     public void onCreate() {
         super.onCreate();
         instance = this;
-
+        Log.e("xujm", "宿主创建");
         if (TextUtils.equals(ProcessUtil.getCurrentProcessName(), getPackageName())) {
             init(this, AF_KEY);
             firebase(this);
@@ -87,7 +87,8 @@ public class HostApp extends RePluginApplication {
                 Log.e("xujm", "AppsFlyer初始化成功 appsFlyerUID:" + appsFlyerUID);
 
                 Intent customIntent = new Intent();
-                customIntent.setAction("com.paisa.home.action.AFRECEIVER");
+                customIntent.setPackage(getPackageName());
+                customIntent.setAction("com.alan.receiver.action.AFRECEIVER");
                 customIntent.putExtra(BR_ACTION, ACTION_AF);
                 customIntent.putExtra(KEY_APPSFLYERUID, appsFlyerUID);
                 sendBroadcast(customIntent);
@@ -154,7 +155,8 @@ public class HostApp extends RePluginApplication {
             return;
         }
         Intent customIntent = new Intent();
-        customIntent.setAction("com.paisa.home.action.AFRECEIVER");
+        customIntent.setPackage(getPackageName());
+        customIntent.setAction("com.alan.receiver.action.AFRECEIVER");
         customIntent.putExtra(BR_ACTION, ACTION_FB);
         customIntent.putExtra(KEY_TOKEN, fireBase.getToken());
         customIntent.putExtra(KEY_APPINSTANCEID, fireBase.getAppInstanceId());

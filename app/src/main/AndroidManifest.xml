@@ -52,25 +52,26 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.cash.yeahrupee.provider"
+            android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
+
             <meta-data
                 android:name="PACKAGE_NAME"
-                android:value="com.cash.yeahrupee" />
+                android:value="${applicationId}" />
+
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
 
         <service
-            android:name="com.alan.pluginhost.google.MyFirebaseMessagingService"
+            android:name=".google.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -78,11 +79,12 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/purple_700" />
+            android:resource="@color/black" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:resource="@string/app_name" />
+
     </application>
 
 </manifest>
