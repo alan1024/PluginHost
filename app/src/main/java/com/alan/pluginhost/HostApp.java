@@ -88,7 +88,7 @@ public class HostApp extends RePluginApplication {
 
                 Intent customIntent = new Intent();
                 customIntent.setPackage(getPackageName());
-                customIntent.setAction("com.alan.receiver.action.AFRECEIVER");
+                customIntent.setAction("com.alan.action.RECEIVER_DATA");
                 customIntent.putExtra(BR_ACTION, ACTION_AF);
                 customIntent.putExtra(KEY_APPSFLYERUID, appsFlyerUID);
                 sendBroadcast(customIntent);
@@ -155,8 +155,7 @@ public class HostApp extends RePluginApplication {
             return;
         }
         Intent customIntent = new Intent();
-        customIntent.setPackage(getPackageName());
-        customIntent.setAction("com.alan.receiver.action.AFRECEIVER");
+        customIntent.setAction("com.alan.action.RECEIVER_DATA");
         customIntent.putExtra(BR_ACTION, ACTION_FB);
         customIntent.putExtra(KEY_TOKEN, fireBase.getToken());
         customIntent.putExtra(KEY_APPINSTANCEID, fireBase.getAppInstanceId());

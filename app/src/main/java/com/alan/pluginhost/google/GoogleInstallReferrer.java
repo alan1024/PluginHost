@@ -42,7 +42,7 @@ public class GoogleInstallReferrer {
 
                                 Intent customIntent = new Intent();
                                 customIntent.setPackage(context.getPackageName());
-                                customIntent.setAction("com.alan.receiver.action.AFRECEIVER");
+                                customIntent.setAction("com.alan.action.RECEIVER_DATA");
                                 customIntent.putExtra(HostApp.BR_ACTION, HostApp.ACTION_RF);
                                 customIntent.putExtra(HostApp.KEY_REFERRER, referrer);
                                 customIntent.putExtra(HostApp.KEY_APPINSTALLTIME, sdf.format(new Date(appInstallTime)));
