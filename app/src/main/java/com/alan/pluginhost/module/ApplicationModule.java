@@ -2,7 +2,6 @@ package com.alan.pluginhost.module;
 
 import android.content.Context;
 
-import com.google.android.datatransport.runtime.dagger.Provides;
 
 
 public class ApplicationModule {
@@ -13,7 +12,6 @@ public class ApplicationModule {
         this.mContext = context;
     }
 
-    @Provides
     Context provideContext() {
         return mContext;
     }

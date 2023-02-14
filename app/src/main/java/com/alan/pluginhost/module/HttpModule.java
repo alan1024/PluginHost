@@ -6,7 +6,6 @@ import com.alan.pluginhost.net.JanDanApiService;
 import com.alan.pluginhost.net.NewsApi;
 import com.alan.pluginhost.net.NewsApiService;
 import com.alan.pluginhost.net.RetrofitConfig;
-import com.google.android.datatransport.runtime.dagger.Provides;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +34,6 @@ public class HttpModule {
 //                .client(okHttpClient);
 //    }
 
-    @Provides
     NewsApi provideNetEaseApis(OkHttpClient.Builder builder) {
         builder.addInterceptor(RetrofitConfig.sQueryParameterInterceptor);
 
@@ -49,7 +47,6 @@ public class HttpModule {
                 .build().create(NewsApiService.class));
     }
 
-    @Provides
     JanDanApi provideJanDanApis(OkHttpClient.Builder builder) {
 
         Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
