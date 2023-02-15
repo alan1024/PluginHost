@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "883251600727",
+    "project_id": "rupeepark-72215",
+    "storage_bucket": "rupeepark-72215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883251600727:android:c0a4516b1087b046097212",
+        "android_client_info": {
+          "package_name": "com.rupee.park"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883251600727-kb8nd39tj521dtcv6nku08gv2afre9gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARyRcaRbFJirUkiHUbLVQLAXSV-pEYpqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883251600727-kb8nd39tj521dtcv6nku08gv2afre9gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
