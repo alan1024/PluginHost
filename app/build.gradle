@@ -55,6 +55,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:23.0.4'
 
     implementation "com.qihoo360.replugin:replugin-host-lib:2.3.4"
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
 }
 
 apply plugin: 'replugin-host-gradle'
