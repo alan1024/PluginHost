@@ -1,0 +1,70 @@
+package com.alan.pluginhost.cluster;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+public class Cluster {
+	private Map<String, List<String>> result = new HashMap<String, List<String>>();
+
+//	public ProcessingResult cluster(String docPath) throws IOException,
+//			Exception {
+//		@SuppressWarnings("unchecked")
+//		final Controller controller = ControllerFactory
+//				.createCachingPooling(IDocumentSource.class);
+//		final List<Document> documents = Lists.newArrayList();
+//		JsonReader jr = new JsonReader(new File(docPath));
+//		while (jr.hasNext()) {
+//			Hit h = jr.next();
+//			documents.add(new Document(h.getPagePOJO().getTitle(), h
+//					.getPagePOJO().getContent()));
+//		}
+//		jr.close();
+//		final Map<String, Object> attributes = Maps.newHashMap();
+//		CommonAttributesDescriptor.attributeBuilder(attributes).documents(
+//				documents);
+//		final ProcessingResult englishResult = controller.process(attributes,
+//				LingoClusteringAlgorithm.class);
+//		ConsoleFormatter.displayResults(englishResult);// 展示
+//		return englishResult;
+//	}
+//
+//	/**
+//	 * 对指定的PagePOJO进行聚类
+//	 *
+//	 * @author GS
+//	 * @param list
+//	 *            PagePOJO List
+//	 * @return ProcessingResult类,调用需要的方法即可.
+//	 * @throws IOException
+//	 * @throws Exception
+//	 */
+//	public Map<String,List<String>> cluster(List<PagePOJO> list) throws IOException,
+//			Exception {
+//		@SuppressWarnings("unchecked")
+//		final Controller controller = ControllerFactory
+//				.createCachingPooling(IDocumentSource.class);
+//		final List<Document> documents = Lists.newArrayList();
+//		Iterator<PagePOJO> it = list.iterator();
+//		while (it.hasNext()) {
+//			PagePOJO pojo = it.next();
+//			documents.add(new Document(pojo.getTitle(), pojo.getContent(),LanguageCode.CHINESE_SIMPLIFIED));
+//		}
+//		final Map<String, Object> attributes = Maps.newHashMap();
+//		CommonAttributesDescriptor.attributeBuilder(attributes).documents(
+//				documents);
+//		final ProcessingResult englishResult = controller.process(attributes,
+//				LingoClusteringAlgorithm.class);
+//		ConsoleFormatter.displayResults(englishResult);// 展示
+//		for (org.carrot2.core.Cluster c : englishResult.getClusters()) {
+//			LinkedList<String> value = new LinkedList<String>();
+//			for (Document d : c.getAllDocuments()) {
+//				value.add(d.getField(Document.TITLE).toString());
+//			}
+//			result.put(c.getLabel(), value);
+//		}
+//		return result;
+//	}
+
+}
