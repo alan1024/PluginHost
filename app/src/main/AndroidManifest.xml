@@ -36,9 +36,33 @@
         android:networkSecurityConfig="@xml/network_config"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
         android:theme="@style/Theme.PluginHost"
-        android:usesCleartextTraffic="true"
-        android:supportsRtl="true">
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.PluginHost.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -55,11 +79,9 @@
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
-
             <meta-data
                 android:name="PACKAGE_NAME"
                 android:value="${applicationId}" />
-
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
@@ -76,15 +98,12 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_logo" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/black" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:resource="@string/app_name" />
-
     </application>
 
 </manifest>
