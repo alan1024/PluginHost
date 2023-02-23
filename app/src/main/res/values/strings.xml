@@ -2,4 +2,7 @@
     <string name="app_name">Rupee Park</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="expand_text">展开</string>
+    <string name="close_text">折叠</string>
 </resources>
