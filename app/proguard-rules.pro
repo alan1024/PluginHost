@@ -101,7 +101,7 @@
 
 # support v4/7库
 -keep public class * extends android.support.v4.**
--keep public class * extends android.support.v7.**
+-keep public class * extends androidx.appcompat.**
 -keep public class * extends android.support.annotation.**
 
 #自定义view
