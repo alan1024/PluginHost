@@ -4,7 +4,7 @@ android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.hero.cash.loan"
+        applicationId "com.sweet.loan.money"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
