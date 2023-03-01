@@ -44,34 +44,8 @@
         android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_logo"
         android:theme="@style/Theme.PluginHost">
-        <activity
-            android:name=".ui.ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
-        <activity
-            android:name=".ui.ScrollingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/Theme.PluginHost.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ui.WelcomeActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ui.SplashActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
+
+    <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Splash">
